@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>my-first-website</title>
+  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>China Trade Logistics Dashboard</title>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <script defer src="scripts/app.js"></script>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <h1>China Trade Logistics Dashboard</h1>
+      <p>
+        Track the latest reference tariffs and estimated shipping lead times for goods exported from China.
+        Use the selectors below to explore rates and transit expectations by destination market and shipping mode.
+      </p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel" aria-labelledby="tariff-heading">
+      <div class="panel__header">
+        <h2 id="tariff-heading">Tariff Snapshot</h2>
+        <div class="control">
+          <label for="market-select">Destination market</label>
+          <select id="market-select" aria-describedby="tariff-note"></select>
+        </div>
+      </div>
+      <p id="tariff-note" class="panel__note">
+        Rates are reference values compiled from public customs notices and trade advisories (updated April&nbsp;2024).
+        Always confirm with a licensed customs broker before shipping.
+      </p>
+      <div class="table-wrapper" role="region" aria-live="polite">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">HS Category</th>
+              <th scope="col">Description</th>
+              <th scope="col">Tariff Rate</th>
+              <th scope="col">Additional Notes</th>
+            </tr>
+          </thead>
+          <tbody id="tariff-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+    <section class="panel" aria-labelledby="shipping-heading">
+      <div class="panel__header">
+        <h2 id="shipping-heading">Transit Time Benchmarks</h2>
+        <div class="control">
+          <label for="mode-select">Shipping mode</label>
+          <select id="mode-select"></select>
+        </div>
+      </div>
+      <p class="panel__note">
+        Transit windows combine carrier service schedules and historical AIS tracking data. Consider holidays and customs
+        clearance when planning final delivery timelines.
+      </p>
+      <div id="shipping-cards" class="card-grid" role="list"></div>
+    </section>
+
+<!-- Change this code here by copy and pasting your template on line 15 -->
+<p>Welcome to your first GitHub Pages website!</p>
+    <section class="panel" aria-labelledby="insights-heading">
+      <h2 id="insights-heading">Planning Tips</h2>
+      <ul class="insights-list">
+        <li>
+          <strong>Bundle classifications:</strong> If multiple components share an HS8 code, request an advance binding ruling
+          to lock in the declared rate for the full shipment.
+        </li>
+        <li>
+          <strong>Balance cost vs. speed:</strong> Air freight offers rapid replenishment but spikes landed cost; rail can be a
+          middle-ground for EU-bound orders with moderate urgency.
+        </li>
+        <li>
+          <strong>Plan for surcharges:</strong> Peak season, war risk, and bunker adjustments can add 10–20% to quoted ocean
+          freight. Confirm validity periods for all offers.
+        </li>
+        <li>
+          <strong>Watch compliance updates:</strong> Sanctions lists, export controls, and Section 301 updates can change with
+          little notice. Subscribe to trade bulletins for your target markets.
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Data compiled for demonstration purposes. Consult logistics partners and customs authorities for official guidance before
+      booking shipments.
+    </p>
+  </footer>
+</body>
+</html>
